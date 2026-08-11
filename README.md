@@ -44,9 +44,9 @@ tests/             # Test files
 - [X] Repository
 - [X] Poetry
 - [X] VENV
-- [ ] f-string
-- [ ] List comprehension
-- [ ] Type hinting
+- [x] f-string
+- [x] Type hinting
+- [x] List comprehension
 - [ ] Manipolazione dati
     - Collezioni (liste, set, dizionari)
 	- Controllo del flusso (zip, enumerate, filter)
@@ -65,7 +65,7 @@ This is a learning repo — code here is exploratory and may be incomplete or ex
 
 Steps done to initialize the project:
 ```bash
-poetry new
+poetry new ai-engineer
 poetry config virtualenvs.in-project true --local
 poetry install
 git init

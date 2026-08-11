@@ -47,9 +47,9 @@ tests/             # Test files
 - [x] f-string
 - [x] Type hinting
 - [x] List comprehension
-- [ ] Manipolazione dati
-    - Collezioni (liste, set, dizionari)
-	- Controllo del flusso (zip, enumerate, filter)
+- [x] Manipolazione dati - Controllo del flusso (zip, enumerate, filter) 
+- [ ] Manipolazione dati - Collezioni (liste, set, dizionari)
+
 - [ ] OOP
 	- Dataclasses (per modello dati)
 	- Pathlib (gestione fs cross-platform)

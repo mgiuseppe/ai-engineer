@@ -49,13 +49,13 @@ Requires Python >= 3.14 and [Poetry](https://python-poetry.org/).
 
 ### Module 1 - Python Fundamentals
 
-- [X] Create Repository
-- [X] Poetry and VENV
+- [x] Create Repository
+- [x] Poetry and VENV
 - [x] f-string
 - [x] Type hinting
-- [x] List comprehension, map
-- [x] Control Flow (filter, zip, enumerate)
-- [x] Collections (list, set, dictionary)
+- [x] List comprehension
+- [x] Map, filter, zip, enumerate
+- [x] Collections (list, tuples, set, dictionary, numpy arrays)
 - [x] OOP (Dataclasses)
 - [x] OOP (Pathlib Cross-platform file system)
 - [x] Exceptions

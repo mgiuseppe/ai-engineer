@@ -14,18 +14,26 @@ Personal learning repository for AI engineering as an integrator — exploring h
 
 Requires Python >= 3.14 and [Poetry](https://python-poetry.org/).
 
-```bash
-poetry install
-```
+1. Install poetry using pipx (pipx let you install packages as standalone application in a separate environment)
 
-* .venv will be gitignored and generated at poetry install
-* poetry.lock will be committed
+2. Use poetry to create the project
+```powershell
+    # create the project
+    > poetry new ai-engineer
+    
+    # enforce poetry to create .venv inside the project folder instead of using a centralized folder.
+    # This ensures that vscode automatically recognizes the venv
+    > poetry config virtualenvs.in-project true
+    
+    # generate the .venv and poetry.lock
+    > poetry install
 
-## Structure
+	# init repo and add default gitignore for python (this excludes .venv folder)
+	git init
+	curl -o .gitignore https://raw.githubusercontent.com/github/gitignore/main/Python.gitignore
 
-```
-src/ai_engineer/   # Main source package
-tests/             # Test files
+	# .venv will be gitignored
+	# poetry.lock will be committed (best practice for apps, should be gitignored for libraries)
 ```
 
 ## Topics
@@ -39,17 +47,15 @@ tests/             # Test files
 | Agents | Agentic workflows and orchestration | planned |
 | Deploy and agentic coding | FastAPI, CI/CD, LangSmith, Unit Tests | planned |
 
-<hr>
+### Module 1 - Python Fundamentals
 
-- [X] Repository
-- [X] Poetry
-- [X] VENV
+- [X] Create Repository
+- [X] Poetry and VENV
 - [x] f-string
 - [x] Type hinting
-- [x] List comprehension
-- [x] Manipolazione dati - Controllo del flusso (zip, enumerate, filter) 
-- [ ] Manipolazione dati - Collezioni (liste, set, dizionari)
-
+- [x] List comprehension, map
+- [x] Control Flow (filter, zip, enumerate)
+- [ ] Collections (list, set, dictionary)
 - [ ] OOP
 	- Dataclasses (per modello dati)
 	- Pathlib (gestione fs cross-platform)
@@ -59,15 +65,13 @@ tests/             # Test files
 - [ ] Prompt engineering (zero shot, few-shot, role prompting)
 - [ ] Task: applicazione che comunica con llm gestendo streaming dati ed errori di rete
 
+## Structure
+
+```
+src/ai_engineer/   # Main source package
+tests/             # Test files
+```
+
 ## Notes
 
 This is a learning repo — code here is exploratory and may be incomplete or experimental.
-
-Steps done to initialize the project:
-```bash
-poetry new ai-engineer
-poetry config virtualenvs.in-project true --local
-poetry install
-git init
-curl -o .gitignore https://raw.githubusercontent.com/github/gitignore/main/Python.gitignore
-```

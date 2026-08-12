@@ -53,12 +53,13 @@ Requires Python >= 3.14 and [Poetry](https://python-poetry.org/).
 - [x] Poetry and VENV
 - [x] f-string
 - [x] Type hinting
-- [x] List comprehension
+- [x] List comprehension and Generators
 - [x] Map, filter, zip, enumerate
 - [x] Collections (list, tuples, set, dictionary, numpy arrays)
 - [x] OOP (Dataclasses)
 - [x] OOP (Pathlib Cross-platform file system)
 - [x] Exceptions
+- [ ] Context Managers (like the c# using)
 - [ ] Pydantic (validate input and output and handle LLM output)
 - [ ] Async/await using httpx (parallel api calls)
 

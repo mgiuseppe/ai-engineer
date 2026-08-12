@@ -55,15 +55,15 @@ Requires Python >= 3.14 and [Poetry](https://python-poetry.org/).
 - [x] Type hinting
 - [x] List comprehension, map
 - [x] Control Flow (filter, zip, enumerate)
-- [ ] Collections (list, set, dictionary)
-- [ ] OOP
-	- Dataclasses (per modello dati)
-	- Pathlib (gestione fs cross-platform)
-- [ ] Gestione eccezione
-- [ ] Pydantic (validare input e output) e lavorare con risposte imprevedibili degli LLM
-- [ ] Async/await con httpx (chiamate api parallele)
-- [ ] Prompt engineering (zero shot, few-shot, role prompting)
-- [ ] Task: applicazione che comunica con llm gestendo streaming dati ed errori di rete
+- [x] Collections (list, set, dictionary)
+- [x] OOP (Dataclasses)
+- [x] OOP (Pathlib Cross-platform file system)
+- [x] Exceptions
+- [ ] Pydantic (validate input and output and handle LLM output)
+- [ ] Async/await using httpx (parallel api calls)
+
+### Module 2 - LLMs
+- [ ] Task: app that communicate with LLM handling data streaming and network errors
 
 ## Structure
 

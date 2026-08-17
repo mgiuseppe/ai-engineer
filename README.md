@@ -53,8 +53,10 @@ Requires Python >= 3.14 and [Poetry](https://python-poetry.org/).
 - [x] Poetry and VENV
 - [x] f-string
 - [x] Type hinting
-- [x] List comprehension and Generators
+- [x] Flow Control
+- [x] List comprehension and generator expressions
 - [x] Map, filter, zip, enumerate
+- [x] Iterables, iterators, generator functions
 - [x] Collections (list, tuples, set, dictionary, numpy arrays)
 - [x] OOP (Dataclasses)
 - [x] OOP (Pathlib Cross-platform file system)

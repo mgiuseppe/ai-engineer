@@ -49,7 +49,7 @@ Requires Python >= 3.14 and [Poetry](https://python-poetry.org/).
 
 ### Module 1 - Python Fundamentals
 
-- [x] Create Repository
+- [x] Create Repository (see [Setup](#setup))
 - [x] Poetry and VENV
 - [x] f-string
 - [x] Type hinting

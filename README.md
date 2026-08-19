@@ -67,11 +67,11 @@ Requires Python >= 3.14 and [Poetry](https://python-poetry.org/).
 - [] More... (Logging, UUID, Regexp, Random, Threading, Numpy, Pandas, Pickle, SQLLite, Flask, Django)
 
 ### Module 2 - LLMs
-- [ ] Build an LLM - Andrej Karpathy
 - [ ] Handle LLM output with Pydantic
 - [ ] Task: app that communicate with LLM handling data streaming and network errors
 
 ### Module Futures
+- [ ] Build an LLM - Andrej Karpathy
 - [ ] [Building AI Agents in Pure Python - Beginner Course](https://www.youtube.com/watch?v=bZzyPscbtI8)
 - [ ] [Systematically Setup LLM Evals (Metrics, Unit Tests, LLM-as-a-Judge)](https://www.youtube.com/watch?v=a3SMraZWNNs)
 

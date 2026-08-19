@@ -62,14 +62,18 @@ Requires Python >= 3.14 and [Poetry](https://python-poetry.org/).
 - [x] OOP (Pathlib Cross-platform file system)
 - [x] Exceptions
 - [x] Pydantic (validate input and output)
-- [ ] Async/await using httpx (parallel api calls)
-- [ ] Context Managers (like the c# using)
-- [0] More... (Logging, UUID, Regexp, Random, Threading, Numpy, Pandas, Pickle, SQLLite, Flask, Django)
+- [x] Context Managers (like the c# using)
+- [x] Async/await using httpx (parallel api calls)
+- [] More... (Logging, UUID, Regexp, Random, Threading, Numpy, Pandas, Pickle, SQLLite, Flask, Django)
 
 ### Module 2 - LLMs
 - [ ] Build an LLM - Andrej Karpathy
 - [ ] Handle LLM output with Pydantic
 - [ ] Task: app that communicate with LLM handling data streaming and network errors
+
+### Module Futures
+- [ ] [Building AI Agents in Pure Python - Beginner Course](https://www.youtube.com/watch?v=bZzyPscbtI8)
+- [ ] [Systematically Setup LLM Evals (Metrics, Unit Tests, LLM-as-a-Judge)](https://www.youtube.com/watch?v=a3SMraZWNNs)
 
 ## Structure
 
@@ -82,4 +86,5 @@ tests/             # Test files
 
 This is a learning repo — code here is exploratory and may be incomplete or experimental.
 
-Great source for python (including more): https://mimo.org/glossary/python
+* Great source for python (including more): [mimo.org](https://mimo.org/glossary/python)
+* Great tutorials: [Dave Ebbelaar on youtube](https://www.youtube.com/@daveebbelaar)

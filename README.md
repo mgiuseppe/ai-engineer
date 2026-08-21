@@ -67,11 +67,21 @@ Requires Python >= 3.14 and [Poetry](https://python-poetry.org/).
 - [] More... (Logging, UUID, Regexp, Random, Threading, Numpy, Pandas, Pickle, SQLLite, Flask, Django)
 
 ### Module 2 - LLMs
+- [ ] LLMs APIs (OpenAI, Anthropic, Deepseek v4 / Kimi K3)
 - [ ] Handle LLM output with Pydantic
+- [ ] Handle network errors with Tenacity
+- [ ] LLMs SDKs
+- [ ] Build yourself a multi-model architecture
+- [ ] LangChain
 - [ ] Task: app that communicate with LLM handling data streaming and network errors
+- [ ] ...
 
 ### Module Futures
 - [ ] Build an LLM - Andrej Karpathy
+- [ ] Choose the right model
+- [ ] Tradeoff between accuracy and speed, temperature, ...
+- [ ] Bottlenecks 
+- [ ] Lowra
 - [ ] [Building AI Agents in Pure Python - Beginner Course](https://www.youtube.com/watch?v=bZzyPscbtI8)
 - [ ] [Systematically Setup LLM Evals (Metrics, Unit Tests, LLM-as-a-Judge)](https://www.youtube.com/watch?v=a3SMraZWNNs)
 

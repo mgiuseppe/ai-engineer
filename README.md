@@ -64,7 +64,10 @@ Requires Python >= 3.14 and [Poetry](https://python-poetry.org/).
 - [x] Pydantic (validate input and output)
 - [x] Context Managers (like the c# using)
 - [x] Async/await using httpx (parallel api calls)
+- [x] Pytest (fixtures, monkeypatch, marks)
+- [ ] FastAPI
 - [] More... (Logging, UUID, Regexp, Random, Threading, Numpy, Pandas, Pickle, SQLLite, Flask, Django)
+
 
 ### Module 2 - LLMs
 - [ ] LLMs APIs (OpenAI, Anthropic, Deepseek v4 / Kimi K3)
@@ -77,6 +80,7 @@ Requires Python >= 3.14 and [Poetry](https://python-poetry.org/).
 - [ ] ...
 
 ### Module Futures
+- [ ] Automate tests and evals in CICD
 - [ ] Build an LLM - Andrej Karpathy
 - [ ] Choose the right model
 - [ ] Tradeoff between accuracy and speed, temperature, ...

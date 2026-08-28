@@ -1,23 +1,24 @@
 """
-LESSON 11 ---- RAW ASGI APP
+LESSON 11 ---- RAW ASGI APP - no framework at all
 
-Raw ASGI app - no framework at all
-This file contains a raw app that implements the ASGI contract and so can be served by an ASGI webserver (uvicorn).
+This file contains a raw app that implements the whole ASGI contract and so can be served by an ASGI webserver (uvicorn).
 This is the same contract that Starlette implements.
-You'll never write a web app like this because you'll build web apps on top of Starlette -> FastAPI and these frameworks will take care of this raw implementation.
+
+This implementation is just for educational purposes, you'll never write a web app like this.
+You'll build web apps on top of Starlette -> FastAPI and they will take care of these raw details.
 You could implement something like this only if you need to write a low level middleware (but you'll usually use Starlette also for middlewares).
 
-How to run:
+Pre-req:
     poetry add uvicorn
+
+    to serve this app you must rename the file from 11b_raw_asgi_app.py to raw_asgi_app.py because python modules' names
+    cannot start with a number and so uvicorn won't be able to import this file if the name starts with a number
+    
+How to run:
     cd src\\ai_engineer\\0_python_basics
     poetry run uvicorn raw_asgi_app:app --reload
 
-    Note: python modules' names cannot start with a number, so i couldn't name the file 11_raw_asgi_app.py otherwise uvicorn could not import this file
-
-Everything below is a raw implementation of the whole ASGI contract. 
-Starlette and FastAPI are built on top of exactly this.
-
-    once started you can test the app 
+Once started you can test the app: 
     # terminal 1
     curl localhost:8000/block <-- this triggers the event-loop trap (the app won't be able to serve any other request until time.sleep returns)
     # terminal 2, immediately

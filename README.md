@@ -65,7 +65,7 @@ Requires Python >= 3.14 and [Poetry](https://python-poetry.org/).
 - [x] Context Managers (like the c# using)
 - [x] Async/await using httpx (parallel api calls)
 - [x] Pytest (fixtures, monkeypatch, marks)
-- [ ] FastAPI
+- [ ] FastAPI (Starlette, ASGI, Raw ASGI implementation)
 - [] More... (Logging, UUID, Regexp, Random, Threading, Numpy, Pandas, Pickle, SQLLite, Flask, Django)
 
 
@@ -81,6 +81,8 @@ Requires Python >= 3.14 and [Poetry](https://python-poetry.org/).
 
 ### Module Futures
 - [ ] Automate tests and evals in CICD
+- [ ] Test that LLM produces only when the client is not saturated (token by token stream stops when client is saturated)
+- [ ] Test that LLM drops if the client drops the connection
 - [ ] Build an LLM - Andrej Karpathy
 - [ ] Choose the right model
 - [ ] Tradeoff between accuracy and speed, temperature, ...

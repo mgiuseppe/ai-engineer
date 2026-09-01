@@ -63,33 +63,178 @@ Requires Python >= 3.14 and [Poetry](https://python-poetry.org/).
 - [x] Exceptions
 - [x] Pydantic (validate input and output)
 - [x] Context Managers (like the c# using)
-- [x] Async/await using httpx (parallel api calls)
+- [x] Async/await using httpx (parallel api calls, retries with tenacity)
 - [x] Pytest (fixtures, monkeypatch, marks)
-- [ ] FastAPI (Starlette, ASGI, Raw ASGI implementation)
 - [] More... (Logging, UUID, Regexp, Random, Threading, Numpy, Pandas, Pickle, SQLLite, Flask, Django)
 
 
 ### Module 2 - LLMs
-- [ ] LLMs APIs (OpenAI, Anthropic, Deepseek v4 / Kimi K3)
-- [ ] Handle LLM output with Pydantic
-- [ ] Handle network errors with Tenacity
+- [x] LLMs APIs (OpenAI)
+    - [x] Chatcompletion/v1 OPENAI
 - [ ] LLMs SDKs
-- [ ] Build yourself a multi-model architecture
-- [ ] LangChain
+    - [ ] OpenAI SDK
+    - [ ] Another model using OpenAI SDK (Deepseek v4 / Kimi K3 / Qwen 3.8)
+    - [ ] Handle LLM output with Pydantic
+    - [ ] Async endpoints
+    - [ ] Streaming
+    - [ ] Send file, audio, images, ...
+    - [ ] Tool calling
+    - [ ] Anthropic SDK
+- [ ] Evals
+    - [ ] Simple Golden dataset (JSONL: input + expected output)
+    - [ ] Regression check
+- [ ] Cost Tracking
+    - [ ] Tiktoken (estimation)
+    - [ ] OpenAI Cost API 
+- [ ] Pipeline to load documents
+    - [ ] [Get your data ready for AI](https://www.youtube.com/watch?v=9lBTS5dM27c)
+        - [ ] Normalize and reduce noise (clean data and enrich with metadata)
+        - [ ] Chunking and embedding
+        - [ ] Vector DB and semantic search 
+            - [ ] Choose a vector db (ChromaDB, PineCone, ...)
+            - [ ] Similarity search and filtering algorithms 
+- [ ] Modular Architecture
+    - [ ] Build yourself a multi-model architecture
+    - [ ] LangChain (in 2023 this was the standard way to structure LLM apps, as of 2026/08 many consider its abstractions leaky and prefer a thin hand-built layer over the SDK)
+- [ ] Prompt techniques
+    - [ ] Chain of thought (as of today reasoning is directly provided by LLM models)
+    - [ ] Zero shot / One shot / Few shot 
+    - [ ] Role prompting
+- [ ] Costing and latency (caching, choose a model, batching)
+    - [ ] Choose the right model https://developers.openai.com/api/docs/guides/model-selection
+    - [ ] Tradeoff between accuracy and speed, temperature
 - [ ] Task: app that communicate with LLM handling data streaming and network errors
-- [ ] ...
 
+### Module 3 - RAGS
+- [ ] RAG Pattern and LangChain to interact with external docs in real time
+- [ ] Advanced Research
+    - [ ] Conversational memory and retrieval
+    - [ ] Re-Ranking
+- [ ] Tool Calling
+    - [ ] Web research
+    - [ ] Interrogate Db
+- [ ] Evaluate RAGS
+    - [ ] RAGAS 
+- [ ] Create a Golden Dataset
+    - [ ] Benchmark
+    - [ ] Failure points
+- [ ] Optimize user queries
+    - [ ] HyDE
+    - [ ] Multi-Query
+- [ ] Production hardening
+    - [ ] Caching
+    - [ ] Rate limiting
+    - [ ] Error handling
+
+### Module 4 - Agents
+- [ ] Agentic Theory
+    - [ ] Reasoning Loop -> Action
+    - [ ] Linear Chains and Autonomous Agents
+- [ ] ReACT Pattern (plan intermediate steps and interact with external environment)
+- [ ] LangGraph (state and non-linear flows)
+    - [ ] Graph architecture (nodes, conditional arcs, state)
+    - [ ] Build System that can handle feedbacks and non-linear logics
+        - [ ] HILT (Human in the loop)
+            - [ ] Breakpoints and approvals
+            - [ ] Checkpointing (pause, feedback, resume) 
+- [ ] Multi Agent Systems
+    - [ ] Specialized agents coordinated by a supervisor
+    - [ ] Handoff strategies
+    - [ ] Communication protocols among agents
+- [ ] MCP
+- [ ] Agentic RAG and Self Correction
+    - [ ] Agents that decide when to use a tool and correct their own answers
+    - [ ] Self-reflections techniques to score the results and guarantee accuracy (confidence) 
+
+### Module 5 - Deploy and Agentic Coding
+- [ ] Rest API with FastAPI (Starlette, ASGI, Raw ASGI implementation)
+    - [x] Introduction and ASGI specification
+    - [ ] Async Endpoints
+    - [ ] DI
+    - [ ] Streaming
+- [ ] Dockerization
+    - [ ] Multi-stage build
+    - [ ] Securing environment variables
+- [ ] CI/CD with GitHub actions
+    - [ ] CI/CD Definitions 
+    - [ ] Workflow to automate tests and evals (Automatic testing)
+    - [ ] Code Quality validation
+    - [ ] Continuous Deployment
+- [ ] Observability (logs, tracing to understand where a multi-step chain breaks)
+    - [ ] Monitoring LLM using Langsmith
+        - [ ] LLM Calls Tracing
+        - [ ] LLM Calls Debugging
+    - [ ] Trulens (Alternative to Langsmith tracing and evals)
+    - [ ] Langfuse (Alternative to Langsmith tracing and evals)
+- [ ] Security Hardening 
+    - [ ] Security protocols against prompt injection
+    - [ ] Rate-Limiting systems
+    - [ ] Validate input to protect infrastructure
+    - [ ] Guardrails
+- [ ] Agentic coding
+    - [ ] Claude Code / Cursor / GitHub Copilot
+    - [ ] VSCode + Claude Code
+    - [ ] Autogenerate docs with AI
+    - [ ] Autogenerate unit tests with AI
+    - [ ] Refactor with AI  
+        - [ ] LLMWiki
+        - [ ] Graphify
+    
 ### Module Futures
-- [ ] Automate tests and evals in CICD
+- [ ] Pi Agent + Qwen 3.7 4b
+- [ ] Realtime APIs
+- [ ] LoRA (Fine-tuning)(another way to give info to the model)
+- [ ] AI / Agentic Apps Architecture (High Level Architecture)
+- [ ] [OpenResponses](https://www.openresponses.org/specification)
+- [ ] Evals (dataset, metrics, regression test on prompts)
+    - [ ] Golden dataset
+    - [ ] [Systematically Setup LLM Evals (Metrics, Unit Tests, LLM-as-a-Judge)](https://www.youtube.com/watch?v=a3SMraZWNNs)
+        - [ ] LLM Evals
+        - [ ] Iteration and improvement
+        - [ ] The analyze, measure, improve cycle
+        - [ ] Unit Tests for LLMs
+        - [ ] Human and model evaluations
+        - [ ] Aligning LLM evaluators
+        - [ ] Automated evaluators
+        - [ ] A/B Testing
+        - [ ] Evaluation Metrics
+        - [ ] Common mistakes and key principles
+- [ ] Failure design (what does the system do when the llm gives the wrong answer? not a technical matter but a business one!)
 - [ ] Test that LLM produces only when the client is not saturated (token by token stream stops when client is saturated)
 - [ ] Test that LLM drops if the client drops the connection
 - [ ] Build an LLM - Andrej Karpathy
-- [ ] Choose the right model
-- [ ] Tradeoff between accuracy and speed, temperature, ...
 - [ ] Bottlenecks 
-- [ ] Lowra
+- [ ] Langfuse
+- [ ] OpenRouter
 - [ ] [Building AI Agents in Pure Python - Beginner Course](https://www.youtube.com/watch?v=bZzyPscbtI8)
-- [ ] [Systematically Setup LLM Evals (Metrics, Unit Tests, LLM-as-a-Judge)](https://www.youtube.com/watch?v=a3SMraZWNNs)
+    - [ ] Structured Output
+    - [ ] Tool calling
+    - [ ] Memory and retrieval
+    - [ ] Prompt chaining
+    - [ ] Routing Requests
+    - [ ] Parallelization
+    - [ ] Deploy AI App
+- [ ] [Build reliable agents](https://www.youtube.com/watch?v=T1Lowy1mnEg)
+    - [ ] AI Agents principles
+    - [ ] Intelligence Layer
+    - [ ] Memory
+    - [ ] Tools
+    - [ ] Validation
+    - [ ] Control
+    - [ ] Recovery
+    - [ ] Feedback
+- [ ] [Build a complete e2e AI project](https://www.youtube.com/watch?v=E8zpgNPx8jE)
+    - [ ] News Scraper built on OpenAI 
+    - [ ] News Scraper built on Anthropic
+    - [ ] Create the pipeline
+    - [ ] Database
+    - [ ] Process articles
+    - [ ] Implement Digest feature
+    - [ ] Aggregator agent
+    - [ ] Ranking articles by user profile
+    - [ ] Email agent
+    - [ ] Deploy and handling deployment errors
+    - [ ] Optimizing code structure
 
 ## Structure
 

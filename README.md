@@ -72,17 +72,19 @@ Requires Python >= 3.14 and [Poetry](https://python-poetry.org/).
 - [x] LLMs APIs (OpenAI)
     - [x] Chatcompletion/v1 OPENAI
 - [ ] LLMs SDKs
-    - [ ] OpenAI SDK
-    - [ ] Another model using OpenAI SDK (Deepseek v4 / Kimi K3 / Qwen 3.8)
-    - [ ] Handle LLM output with Pydantic
-    - [ ] Async endpoints
+    - [x] OpenAI SDK
+    - [x] Async endpoints
+    - [x] Another provider/model using OpenAI SDK (Deepseek v4 / Kimi K3 / Qwen 3.8 / Groq)
+    - [x] Handle LLM output with Pydantic
     - [ ] Streaming
     - [ ] Send file, audio, images, ...
     - [ ] Tool calling
     - [ ] Anthropic SDK
 - [ ] Evals
-    - [ ] Simple Golden dataset (JSONL: input + expected output)
+    - [ ] Simple Golden dataset (JSONL: input + expected output) and manually check evals
+    - [ ] Compare models with evals (see 3_openai_sdk_structured_output to retrieve a nice usecase)
     - [ ] Regression check
+    - [ ] Promptfoo
 - [ ] Cost Tracking
     - [ ] Tiktoken (estimation)
     - [ ] OpenAI Cost API 
@@ -96,7 +98,7 @@ Requires Python >= 3.14 and [Poetry](https://python-poetry.org/).
 - [ ] Modular Architecture
     - [ ] Build yourself a multi-model architecture
     - [ ] LangChain (in 2023 this was the standard way to structure LLM apps, as of 2026/08 many consider its abstractions leaky and prefer a thin hand-built layer over the SDK)
-- [ ] Prompt techniques
+- [ ] Prompt techniques ([prompting guide](https://developers.openai.com/api/docs/guides/prompt-engineering?prompt-example=prompt))
     - [ ] Chain of thought (as of today reasoning is directly provided by LLM models)
     - [ ] Zero shot / One shot / Few shot 
     - [ ] Role prompting
@@ -206,6 +208,7 @@ Requires Python >= 3.14 and [Poetry](https://python-poetry.org/).
 - [ ] Bottlenecks 
 - [ ] Langfuse
 - [ ] OpenRouter
+- [ ] LiteLLM (alternative to OpenRouter, it also lets you define rate limit at gateway level)
 - [ ] [Building AI Agents in Pure Python - Beginner Course](https://www.youtube.com/watch?v=bZzyPscbtI8)
     - [ ] Structured Output
     - [ ] Tool calling

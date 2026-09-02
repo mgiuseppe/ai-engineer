@@ -88,7 +88,7 @@ Requires Python >= 3.14 and [Poetry](https://python-poetry.org/).
 - [ ] Pipeline to load documents
     - [ ] [Get your data ready for AI](https://www.youtube.com/watch?v=9lBTS5dM27c)
         - [ ] Normalize and reduce noise (clean data and enrich with metadata)
-        - [ ] Chunking and embedding
+        - [ ] Chunking and [embedding] (https://developers.openai.com/api/docs/guides/embeddings)
         - [ ] Vector DB and semantic search 
             - [ ] Choose a vector db (ChromaDB, PineCone, ...)
             - [ ] Similarity search and filtering algorithms 
@@ -149,6 +149,7 @@ Requires Python >= 3.14 and [Poetry](https://python-poetry.org/).
     - [ ] Handoff strategies
     - [ ] Communication protocols among agents
 - [ ] MCP
+- [ ] [Voice Angent](https://developers.openai.com/api/docs/guides/voice-agents)
 - [ ] Agentic RAG and Self Correction
     - [ ] Agents that decide when to use a tool and correct their own answers
     - [ ] Self-reflections techniques to score the results and guarantee accuracy (confidence) 

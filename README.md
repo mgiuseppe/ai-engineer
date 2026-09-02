@@ -183,6 +183,7 @@ Requires Python >= 3.14 and [Poetry](https://python-poetry.org/).
         - [ ] Graphify
     
 ### Module Futures
+- [ ] [Road Map by Dave Ebbelaar](https://www.youtube.com/watch?v=O2UmHpNlwUw)
 - [ ] Pi Agent + Qwen 3.7 4b
 - [ ] Realtime APIs
 - [ ] LoRA (Fine-tuning)(another way to give info to the model)

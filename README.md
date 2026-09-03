@@ -79,6 +79,9 @@ Requires Python >= 3.14 and [Poetry](https://python-poetry.org/).
     - [x] Streaming
     - [x] Send file, audio, images, ...
     - [ ] [Tool calling](https://developers.openai.com/api/docs/guides/tools)
+        - [x] websearch / filesearch /
+        - [x] function calling / tool search
+        - [] mcp
     - [ ] Anthropic SDK
 - [ ] Evals
     - [ ] Simple Golden dataset (JSONL: input + expected output) and manually check evals

@@ -71,7 +71,7 @@ Requires Python >= 3.14 and [Poetry](https://python-poetry.org/).
 ### Module 2 - LLMs
 - [x] LLMs APIs (OpenAI)
     - [x] Chatcompletion/v1 OPENAI
-- [ ] LLMs SDKs
+- [x] LLMs SDKs
     - [x] OpenAI SDK
     - [x] Async endpoints
     - [x] Another provider/model using OpenAI SDK (Deepseek v4 / Kimi K3 / Qwen 3.8 / Groq)
@@ -82,12 +82,7 @@ Requires Python >= 3.14 and [Poetry](https://python-poetry.org/).
         - [x] websearch / filesearch /
         - [x] function calling / tool search
         - [x] mcp
-    - [ ] Anthropic SDK
-- [ ] Evals
-    - [ ] Simple Golden dataset (JSONL: input + expected output) and manually check evals
-    - [ ] Compare models with evals (see 3_openai_sdk_structured_output to retrieve a nice usecase)
-    - [ ] Regression check
-    - [ ] Promptfoo
+    - [x] Anthropic SDK
 - [ ] Pipeline to load documents
     - [ ] [Get your data ready for AI](https://www.youtube.com/watch?v=9lBTS5dM27c)
         - [ ] Normalize and reduce noise (clean data and enrich with metadata)
@@ -112,11 +107,16 @@ Requires Python >= 3.14 and [Poetry](https://python-poetry.org/).
     - [ ] [Prompt Caching](https://developers.openai.com/api/docs/guides/prompt-caching)
     - [ ] [Batching](https://developers.openai.com/api/docs/guides/batch)
     - [ ] [Flex Processing](https://developers.openai.com/api/docs/guides/flex-processing?api-mode=responses)
+- [ ] Evals
+    - [ ] Simple Golden dataset (JSONL: input + expected output) and manually check evals
+    - [ ] Compare models with evals (see 3_openai_sdk_structured_output to retrieve a nice usecase)
+    - [ ] Regression check
+    - [ ] Promptfoo
 - [ ] Task: app that communicate with LLM handling data streaming and network errors
 
 ### Module 3 - RAGS
 - [ ] RAG Pattern and LangChain to interact with external docs in real time
-- [ ]
+- [ ] [Skills](https://developers.openai.com/api/docs/guides/tools-skills)
 - [ ] Advanced Research
     - [ ] Conversational memory and retrieval
     - [ ] Re-Ranking

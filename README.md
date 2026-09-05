@@ -83,16 +83,6 @@ Requires Python >= 3.14 and [Poetry](https://python-poetry.org/).
         - [x] function calling / tool search
         - [x] mcp
     - [x] Anthropic SDK
-- [ ] Pipeline to load documents
-    - [ ] [Get your data ready for AI](https://www.youtube.com/watch?v=9lBTS5dM27c)
-        - [ ] Normalize and reduce noise (clean data and enrich with metadata)
-        - [ ] Chunking and [embedding] (https://developers.openai.com/api/docs/guides/embeddings)
-        - [ ] Vector DB and semantic search 
-            - [ ] Choose a vector db (ChromaDB, PineCone, ...)
-            - [ ] Similarity search and filtering algorithms 
-- [ ] Cost Tracking
-    - [ ] Tiktoken (estimation)
-    - [ ] OpenAI Cost API
 - [ ] Modular Architecture
     - [ ] Build yourself a multi-model architecture
     - [ ] LangChain (in 2023 this was the standard way to structure LLM apps, as of 2026/08 many consider its abstractions leaky and prefer a thin hand-built layer over the SDK)
@@ -100,6 +90,9 @@ Requires Python >= 3.14 and [Poetry](https://python-poetry.org/).
     - [ ] Chain of thought (as of today reasoning is directly provided by LLM models)
     - [ ] Zero shot / One shot / Few shot 
     - [ ] Role prompting
+- [ ] Cost Tracking
+    - [ ] Tiktoken (estimation)
+    - [ ] OpenAI Cost API
 - [ ] Costing and latency (caching, choose a model, batching)
     - [ ] Choose the right model https://developers.openai.com/api/docs/guides/model-selection
     - [ ] Tradeoff between accuracy and speed, temperature
@@ -115,8 +108,16 @@ Requires Python >= 3.14 and [Poetry](https://python-poetry.org/).
 - [ ] Task: app that communicate with LLM handling data streaming and network errors
 
 ### Module 3 - RAGS
-- [ ] RAG Pattern and LangChain to interact with external docs in real time
-- [ ] [Skills](https://developers.openai.com/api/docs/guides/tools-skills)
+- [x] RAG Pattern intro
+- [ ] Semantic search intro
+- [ ] Pipeline to load documents
+    - [ ] [Get your data ready for AI](https://www.youtube.com/watch?v=9lBTS5dM27c)
+        - [ ] Normalize and reduce noise (clean data and enrich with metadata)
+        - [ ] Chunking and [embedding] (https://developers.openai.com/api/docs/guides/embeddings)
+        - [ ] Vector DB and semantic search 
+            - [ ] Choose a vector db (ChromaDB, PineCone, ...)
+            - [ ] Similarity search and filtering algorithms 
+- [ ] LangChain to interact with external docs in real time
 - [ ] Advanced Research
     - [ ] Conversational memory and retrieval
     - [ ] Re-Ranking
@@ -194,6 +195,7 @@ Requires Python >= 3.14 and [Poetry](https://python-poetry.org/).
 ### Module Futures
 - [ ] [OpenAI Production BestPractices](https://developers.openai.com/api/docs/guides/production-best-practices)
 - [ ] [Road Map by Dave Ebbelaar](https://www.youtube.com/watch?v=O2UmHpNlwUw)
+- [ ] [Skills](https://developers.openai.com/api/docs/guides/tools-skills)
 - [ ] Pi Agent + Qwen 3.7 4b
 - [ ] Realtime APIs
 - [ ] LoRA (Fine-tuning)(another way to give info to the model)

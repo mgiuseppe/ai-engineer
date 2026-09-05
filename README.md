@@ -69,6 +69,9 @@ Requires Python >= 3.14 and [Poetry](https://python-poetry.org/).
 
 
 ### Module 2 - LLMs
+- [x] LLM Fundamentals
+    - [x] [Enkk - Inside ChatGPT](https://www.youtube.com/watch?v=-_c5oRVbDBU)
+    - [x] [3Blue1Brown - LLM, transformers and attention is all you need](https://youtu.be/wjZofJX0v4M?is=yHu30PV7gYv-txZh)
 - [x] LLMs APIs (OpenAI)
     - [x] Chatcompletion/v1 OPENAI
 - [x] LLMs SDKs
@@ -195,6 +198,7 @@ Requires Python >= 3.14 and [Poetry](https://python-poetry.org/).
 ### Module Futures
 - [ ] [OpenAI Production BestPractices](https://developers.openai.com/api/docs/guides/production-best-practices)
 - [ ] [Road Map by Dave Ebbelaar](https://www.youtube.com/watch?v=O2UmHpNlwUw)
+- [ ] [Enkk Fine-tuning intro](https://www.youtube.com/watch?v=111WfHhmkcU)
 - [ ] [Skills](https://developers.openai.com/api/docs/guides/tools-skills)
 - [ ] Pi Agent + Qwen 3.7 4b
 - [ ] Realtime APIs

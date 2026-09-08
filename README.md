@@ -111,8 +111,9 @@ Requires Python >= 3.14 and [Poetry](https://python-poetry.org/).
 - [ ] Task: app that communicate with LLM handling data streaming and network errors
 
 ### Module 3 - RAGS
-- [x] RAG Pattern intro
-- [ ] Semantic search intro
+- [x] RAG (intro and examples without semantic search)
+- [x] Semantic search (chunking, embedding, similarity)
+- [ ] Vector DB
 - [ ] Pipeline to load documents
     - [ ] [Get your data ready for AI](https://www.youtube.com/watch?v=9lBTS5dM27c)
         - [ ] Normalize and reduce noise (clean data and enrich with metadata)
@@ -196,6 +197,7 @@ Requires Python >= 3.14 and [Poetry](https://python-poetry.org/).
         - [ ] Graphify
     
 ### Module Futures
+- [ ] Eval offline (against golden dataset) vs online (against user)
 - [ ] [OpenAI Production BestPractices](https://developers.openai.com/api/docs/guides/production-best-practices)
 - [ ] [Road Map by Dave Ebbelaar](https://www.youtube.com/watch?v=O2UmHpNlwUw)
 - [ ] [Enkk Fine-tuning intro](https://www.youtube.com/watch?v=111WfHhmkcU)

@@ -1,0 +1,14 @@
+services:
+  qdrant:
+    image: qdrant/qdrant:latest # For real applications you should pin a specific version 
+    container_name: qdrant
+    ports:
+      - "6333:6333"   # REST API + web UI
+      - "6334:6334"   # gRPC - this won't be used in this example, but is available for other use cases and is faster than REST API
+    volumes:
+      - qdrant_storage:/qdrant/storage # Volume is needed to persist data between restarts
+                                       # If you prefer to mount a local folder instead of a named volume you can use ./qdrant_storage:/qdrant/storage  
+    restart: unless-stopped
+
+volumes:
+  qdrant_storage: # named volume, handled by docker itself (in docker for windows it's created in the docker VM, in linux it's in /var/libs/docker/volumes since there is no VM)

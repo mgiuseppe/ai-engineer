@@ -2,6 +2,10 @@
 
 Personal learning repository for AI engineering as an integrator — exploring how to build applications on top of LLMs and AI infrastructure using Python.
 
+## Interviews tips
+* What would you expect from an ideal candidate for this role?
+* What's the biggest challenge your team faces right now with AI?
+
 ## Goals
 
 - Understand and use LLM APIs (Claude, OpenAI, etc.)
@@ -86,53 +90,46 @@ Requires Python >= 3.14 and [Poetry](https://python-poetry.org/).
         - [x] function calling / tool search
         - [x] mcp
     - [x] Anthropic SDK
-- [ ] Modular Architecture
-    - [ ] Build yourself a multi-model architecture
-    - [ ] LangChain (in 2023 this was the standard way to structure LLM apps, as of 2026/08 many consider its abstractions leaky and prefer a thin hand-built layer over the SDK)
 - [ ] Prompt techniques ([prompting guide](https://developers.openai.com/api/docs/guides/prompt-engineering?prompt-example=prompt))
-    - [ ] Chain of thought (as of today reasoning is directly provided by LLM models)
     - [ ] Zero shot / One shot / Few shot 
     - [ ] Role prompting
-- [ ] Cost Tracking
-    - [ ] Tiktoken (estimation)
-    - [ ] OpenAI Cost API
+    - [ ] Chain of thought (as of today reasoning is directly provided by LLM models)
+- [ ] Modular Architecture
+    - [ ] Build yourself a multi-model architecture
 - [ ] Costing and latency (caching, choose a model, batching)
+    - [ ] OpenAI Cost API
     - [ ] Choose the right model https://developers.openai.com/api/docs/guides/model-selection
     - [ ] Tradeoff between accuracy and speed, temperature
     - [ ] [Cost optimization](https://developers.openai.com/api/docs/guides/cost-optimization)
     - [ ] [Prompt Caching](https://developers.openai.com/api/docs/guides/prompt-caching)
     - [ ] [Batching](https://developers.openai.com/api/docs/guides/batch)
     - [ ] [Flex Processing](https://developers.openai.com/api/docs/guides/flex-processing?api-mode=responses)
-- [ ] Evals
-    - [ ] Simple Golden dataset (JSONL: input + expected output) and manually check evals
-    - [ ] Compare models with evals (see 3_openai_sdk_structured_output to retrieve a nice usecase)
-    - [ ] Regression check
-    - [ ] Promptfoo
-- [ ] Task: app that communicate with LLM handling data streaming and network errors
 
 ### Module 3 - RAGS
 - [x] RAG (intro and examples without semantic search)
-- [x] Semantic search (chunking, embedding, similarity)
-- [ ] Vector DB
-- [ ] Pipeline to load documents
-    - [ ] [Get your data ready for AI](https://www.youtube.com/watch?v=9lBTS5dM27c)
-        - [ ] Normalize and reduce noise (clean data and enrich with metadata)
-        - [ ] Chunking and [embedding] (https://developers.openai.com/api/docs/guides/embeddings)
-        - [ ] Vector DB and semantic search 
-            - [ ] Choose a vector db (ChromaDB, PineCone, ...)
-            - [ ] Similarity search and filtering algorithms 
-- [ ] LangChain to interact with external docs in real time
-- [ ] Advanced Research
-    - [ ] Conversational memory and retrieval
-    - [ ] Re-Ranking
-- [ ] Tool Calling
-    - [ ] Web research
-    - [ ] Interrogate Db
-- [ ] Evaluate RAGS
-    - [ ] RAGAS 
-- [ ] Create a Golden Dataset
+- [x] Semantic search 
+    - [x] Chunking
+    - [x] [Embedding] (https://developers.openai.com/api/docs/guides/embeddings)
+    - [x] Cosine similarity
+    - [x] Re-Ranking
+- [x] Vector DB
+    - [x] Save embeddings and payloads
+    - [x] Execute queries
+    - [x] Metadata to categorize and enrich
+    - [x] Metadata filtering
+- [x] Estimate embedding costs
+    - [x] Tiktoken (cost estimation)
+- [ ] Golden Dataset
+    - [ ] Create a golden dataset
     - [ ] Benchmark
     - [ ] Failure points
+- [ ] [Evals](https://www.youtube.com/watch?v=a3SMraZWNNs)
+    - [ ] Golden dataset in JSONL and manually check evals (JSONL: input + expected output)
+    - [ ] Compare models with evals (see 3_openai_sdk_structured_output to retrieve a nice usecase)
+    - [ ] Regression checks
+    - [ ] [Promptfoo - a library for evals and red-teaming](https://developers.openai.com/cookbook/examples/evaluation/moving-from-openai-evals-to-promptfoo)
+- [ ] Evaluate RAGS
+    - [ ] RAGAS - helps to evaluate RAGS by creating golden dataset and use llm as a judge
 - [ ] Optimize user queries
     - [ ] HyDE
     - [ ] Multi-Query
@@ -140,6 +137,15 @@ Requires Python >= 3.14 and [Poetry](https://python-poetry.org/).
     - [ ] Caching
     - [ ] Rate limiting
     - [ ] Error handling
+- [ ] LangChain to interact with external docs in real time 
+    - Notes: in 2023 this was the standard way to structure LLM apps, as of 2026/08 many consider its abstractions leaky and prefer a thin hand-built layer over the SDK
+- [ ] [Project: Pipeline to load documents with docling](https://www.youtube.com/watch?v=9lBTS5dM27c)
+    - [ ] Parse with docling 
+    - [ ] Hybrid chunking with docling
+    - [ ] Enrich with Metadata (doc name, page numbers)
+    - [ ] Embedding
+    - [ ] Vector DB
+    - [ ] Retrieve with strimlit
 
 ### Module 4 - Agents
 - [ ] Agentic Theory
@@ -159,6 +165,7 @@ Requires Python >= 3.14 and [Poetry](https://python-poetry.org/).
 - [ ] MCP
 - [ ] [Voice Angent](https://developers.openai.com/api/docs/guides/voice-agents)
 - [ ] Agentic RAG and Self Correction
+    - [ ] Agents that decide when to use rag
     - [ ] Agents that decide when to use a tool and correct their own answers
     - [ ] Self-reflections techniques to score the results and guarantee accuracy (confidence) 
 
@@ -197,6 +204,7 @@ Requires Python >= 3.14 and [Poetry](https://python-poetry.org/).
         - [ ] Graphify
     
 ### Module Futures
+- [ ] Conversational memory
 - [ ] Eval offline (against golden dataset) vs online (against user)
 - [ ] [OpenAI Production BestPractices](https://developers.openai.com/api/docs/guides/production-best-practices)
 - [ ] [Road Map by Dave Ebbelaar](https://www.youtube.com/watch?v=O2UmHpNlwUw)
@@ -264,6 +272,7 @@ Requires Python >= 3.14 and [Poetry](https://python-poetry.org/).
     - [x] Nested Models
     - [x] Pydantic Settings
     - [x] Structured Output with LLMs
+- [ ] [Macro evals for agentic systems](https://developers.openai.com/cookbook/examples/partners/macro_evals_for_agentic_systems/macro_evals_for_agentic_systems)
 
 ## Structure
 
@@ -278,3 +287,5 @@ This is a learning repo — code here is exploratory and may be incomplete or ex
 
 * Great source for python (including more): [mimo.org](https://mimo.org/glossary/python)
 * Great tutorials: [Dave Ebbelaar on youtube](https://www.youtube.com/@daveebbelaar)
+* Datasets: [Hugging Face Datasets divided by training and test](https://huggingface.co/datasets)
+* [Playwright library for webautomation](https://playwright.dev/)

@@ -119,6 +119,12 @@ Requires Python >= 3.14 and [Poetry](https://python-poetry.org/).
     - [x] Metadata filtering
 - [x] Estimate embedding costs
     - [x] Tiktoken (cost estimation)
+- [x] [Project: Pipeline to load documents with docling](https://www.youtube.com/watch?v=9lBTS5dM27c)
+    - [x] Parse with docling 
+    - [x] Hybrid chunking with docling (automatically add metadata such document name, page numbers, etc..)
+    - [x] Embedding (done in external project regulations_rag)
+    - [x] Vector DB (done in external project regulations_rag)
+    - [x] Retrieve with strimlit (done in external project regulations_rag)
 - [ ] Golden Dataset
     - [ ] Create a golden dataset
     - [ ] Benchmark
@@ -139,13 +145,7 @@ Requires Python >= 3.14 and [Poetry](https://python-poetry.org/).
     - [ ] Error handling
 - [ ] LangChain to interact with external docs in real time 
     - Notes: in 2023 this was the standard way to structure LLM apps, as of 2026/08 many consider its abstractions leaky and prefer a thin hand-built layer over the SDK
-- [ ] [Project: Pipeline to load documents with docling](https://www.youtube.com/watch?v=9lBTS5dM27c)
-    - [ ] Parse with docling 
-    - [ ] Hybrid chunking with docling
-    - [ ] Enrich with Metadata (doc name, page numbers)
-    - [ ] Embedding
-    - [ ] Vector DB
-    - [ ] Retrieve with strimlit
+
 
 ### Module 4 - Agents
 - [ ] Agentic Theory
@@ -206,6 +206,7 @@ Requires Python >= 3.14 and [Poetry](https://python-poetry.org/).
 ### Module Futures
 - [ ] Conversational memory
 - [ ] Eval offline (against golden dataset) vs online (against user)
+- [ ] [Dave-ebbelaar ai cookbook](https://github.com/daveebbelaar/ai-cookbook)
 - [ ] [OpenAI Production BestPractices](https://developers.openai.com/api/docs/guides/production-best-practices)
 - [ ] [Road Map by Dave Ebbelaar](https://www.youtube.com/watch?v=O2UmHpNlwUw)
 - [ ] [Enkk Fine-tuning intro](https://www.youtube.com/watch?v=111WfHhmkcU)

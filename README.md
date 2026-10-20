@@ -2,10 +2,6 @@
 
 Personal learning repository for AI engineering as an integrator — exploring how to build applications on top of LLMs and AI infrastructure using Python.
 
-## Interviews tips
-* What would you expect from an ideal candidate for this role?
-* What's the biggest challenge your team faces right now with AI?
-
 ## Goals
 
 - Understand and use LLM APIs (Claude, OpenAI, etc.)
@@ -13,6 +9,15 @@ Personal learning repository for AI engineering as an integrator — exploring h
 - Explore vector databases and embedding workflows
 - Build retrieval-augmented generation (RAG) pipelines
 - Test agent frameworks and orchestration patterns
+
+## Status
+
+- Module 1 complete (Python foundations).
+- Module 2 complete (LLM SDKs, tool calling).
+- Module 3 (RAG) applied in a working project → **[regulations-rag](https://github.com/mgiuseppe/regulations-rag)**,
+a retrieval pipeline over EU food-contact regulations
+	- Currently paused while deepening modern .NET → **[ProductApi_DotNet10](https://github.com/mgiuseppe/ProductApi_DotNet10)**.
+- Modules 4–5 (agents, deploy with mlops) are the next stretch.
 
 ## Setup
 
@@ -44,12 +49,12 @@ Requires Python >= 3.14 and [Poetry](https://python-poetry.org/).
 
 | Topic | Description | Status |
 |-------|-------------|--------|
-| Python | Python Fundamentals | planned |
-| LLM Tool Calls | Function/tool calling with LLMs | planned |
-| Vector DBs | Embeddings and similarity search | planned |
-| RAG | Retrieval-augmented generation pipelines | planned |
-| Agents | Agentic workflows and orchestration | planned |
-| Deploy and agentic coding | FastAPI, CI/CD, LangSmith, Unit Tests | planned |
+| Python | Python Fundamentals | ✅ done |
+| LLM Tool Calls | Function/tool calling with LLMs | ✅ done |
+| Vector DBs | Embeddings and similarity search | ✅ done |
+| RAG | Retrieval-augmented generation pipelines | doing - applied in **[regulations-rag](https://github.com/mgiuseppe/regulations-rag)** |
+| Agents | Agentic workflows and orchestration | ⏳ planned |
+| Deploy and agentic coding | FastAPI, CI/CD, LangSmith, Unit Tests | ⏳ planned |
 
 ### Module 1 - Python Fundamentals
 
@@ -69,8 +74,7 @@ Requires Python >= 3.14 and [Poetry](https://python-poetry.org/).
 - [x] Context Managers (like the c# using)
 - [x] Async/await using httpx (parallel api calls, retries with tenacity)
 - [x] Pytest (fixtures, monkeypatch, marks)
-- [] More... (Logging, UUID, Regexp, Random, Threading, Numpy, Pandas, Pickle, SQLLite, Flask, Django)
-
+- [ ] More... (Logging, UUID, Regexp, Random, Threading, Numpy, Pandas, Pickle, SQLite, Flask, Django)
 
 ### Module 2 - LLMs
 - [x] LLM Fundamentals
@@ -90,26 +94,14 @@ Requires Python >= 3.14 and [Poetry](https://python-poetry.org/).
         - [x] function calling / tool search
         - [x] mcp
     - [x] Anthropic SDK
-- [ ] Prompt techniques ([prompting guide](https://developers.openai.com/api/docs/guides/prompt-engineering?prompt-example=prompt))
-    - [ ] Zero shot / One shot / Few shot 
-    - [ ] Role prompting
-    - [ ] Chain of thought (as of today reasoning is directly provided by LLM models)
-- [ ] Modular Architecture
-    - [ ] Build yourself a multi-model architecture
-- [ ] Costing and latency (caching, choose a model, batching)
-    - [ ] OpenAI Cost API
-    - [ ] Choose the right model https://developers.openai.com/api/docs/guides/model-selection
-    - [ ] Tradeoff between accuracy and speed, temperature
-    - [ ] [Cost optimization](https://developers.openai.com/api/docs/guides/cost-optimization)
-    - [ ] [Prompt Caching](https://developers.openai.com/api/docs/guides/prompt-caching)
-    - [ ] [Batching](https://developers.openai.com/api/docs/guides/batch)
-    - [ ] [Flex Processing](https://developers.openai.com/api/docs/guides/flex-processing?api-mode=responses)
+- [x] Modular Architecture
+    - [x] Build yourself a multi-model architecture (IChatClient of microsoft is a good enough example, we don't need to reimplement this)
 
 ### Module 3 - RAGS
 - [x] RAG (intro and examples without semantic search)
 - [x] Semantic search 
     - [x] Chunking
-    - [x] [Embedding] (https://developers.openai.com/api/docs/guides/embeddings)
+    - [x] [Embedding](https://developers.openai.com/api/docs/guides/embeddings)
     - [x] Cosine similarity
     - [x] Re-Ranking
 - [x] Vector DB
@@ -122,9 +114,9 @@ Requires Python >= 3.14 and [Poetry](https://python-poetry.org/).
 - [x] [Project: Pipeline to load documents with docling](https://www.youtube.com/watch?v=9lBTS5dM27c)
     - [x] Parse with docling 
     - [x] Hybrid chunking with docling (automatically add metadata such document name, page numbers, etc..)
-    - [x] Embedding (done in external project regulations_rag)
-    - [x] Vector DB (done in external project regulations_rag)
-    - [x] Retrieve with strimlit (done in external project regulations_rag)
+    - [x] Embedding (done in external project regulations-rag)
+    - [x] Vector DB (done in external project regulations-rag)
+    - [x] Retrieve with streamlit (done in external project regulations-rag)
 - [ ] Golden Dataset
     - [ ] Create a golden dataset
     - [ ] Benchmark
@@ -195,17 +187,29 @@ Requires Python >= 3.14 and [Poetry](https://python-poetry.org/).
     - [ ] Validate input to protect infrastructure
     - [ ] Guardrails
 - [ ] Agentic coding
-    - [ ] Claude Code / Cursor / GitHub Copilot
-    - [ ] VSCode + Claude Code
-    - [ ] Autogenerate docs with AI
-    - [ ] Autogenerate unit tests with AI
+    - [x] Claude Code / Cursor / GitHub Copilot
+    - [x] VSCode + Claude Code
+    - [x] Autogenerate unit tests with AI
+	- [ ] Autogenerate docs with AI
     - [ ] Refactor with AI  
         - [ ] LLMWiki
         - [ ] Graphify
+- [ ] Costing and latency (caching, choose a model, batching)
+    - [ ] OpenAI Cost API
+    - [ ] Choose the right model https://developers.openai.com/api/docs/guides/model-selection
+    - [ ] Tradeoff between accuracy and speed, temperature
+    - [ ] [Cost optimization](https://developers.openai.com/api/docs/guides/cost-optimization)
+    - [ ] [Prompt Caching](https://developers.openai.com/api/docs/guides/prompt-caching)
+    - [ ] [Batching](https://developers.openai.com/api/docs/guides/batch)
+    - [ ] [Flex Processing](https://developers.openai.com/api/docs/guides/flex-processing?api-mode=responses)
     
 ### Module Futures
 - [ ] Conversational memory
 - [ ] Eval offline (against golden dataset) vs online (against user)
+- [ ] Prompt techniques ([prompting guide](https://developers.openai.com/api/docs/guides/prompt-engineering?prompt-example=prompt))
+    - [ ] Zero shot / One shot / Few shot 
+    - [ ] Role prompting
+    - [ ] Chain of thought (as of today reasoning is directly provided by LLM models)
 - [ ] [Dave-ebbelaar ai cookbook](https://github.com/daveebbelaar/ai-cookbook)
 - [ ] [OpenAI Production BestPractices](https://developers.openai.com/api/docs/guides/production-best-practices)
 - [ ] [Road Map by Dave Ebbelaar](https://www.youtube.com/watch?v=O2UmHpNlwUw)
